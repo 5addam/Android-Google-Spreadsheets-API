@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://sch
+    emas.android.com/tools"
+    xmlns:tools1="http://schemas.android.com/tools"
+    android:id="@+id/view_rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.quickstart.DataActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/action_bar" />
+
+    <RelativeLayout
+        android:id="@+id/view_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txt_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_output" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_addRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:elevation="7dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#edecec">
+
+            <ImageView
+                android:id="@+id/img_date"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/date" />
+
+            <EditText
+                android:id="@+id/edt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:hint="Date"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <ImageView
+                android:id="@+id/img_categories"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/img_date"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/categories" />
+
+            <Spinner
+                android:id="@+id/dropbox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_date"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"></Spinner>
+
+            <ImageView
+                android:id="@+id/img_name"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/dropbox"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/price" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dropbox"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_name"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/price" />
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_name"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:hint="Price"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/btn_addToSheet"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Add to Sheet" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_addToSheet"
+                android:layout_centerHorizontal="true"
+                android:text="Cancel" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:layout_centerInParent="true"
+        android:elevation="7dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/themeColor"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#f4f4f4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change SheetID"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edt_sheetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/btn_submitSheetID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#969696"
+                android:text="OK"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_cancelSheetID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="#969494"
+                android:text="Cancel"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/add_row"
+        app:backgroundTint="@color/themeColor"
+        app:borderWidth="0dp"
+        app:elevation="5dp"
+        app:fabSize="auto"
+        app:pressedTranslationZ="12dp" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/group_view"
+    android:layout_margin="5dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#910c0c"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/txt_group_date"
+        android:background="#aeaeae"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_group_date"
+        android:layout_alignParentLeft="true"
+        android:text="Names"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:id="@+id/txt_group_name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txt_group_date"
+        android:text="Prices"
+        android:textSize="15dp"
+        android:textColor="#636363"
+        android:id="@+id/txt_group_price" />
+
+</RelativeLayout>

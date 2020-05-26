@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+    </style>   <!-- Customize your theme here. -->
+
+    <style name="customToolBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="actionOverflowMenuStyle">@style/customMenuItem</item>
+        <item name="android:background">@color/themeColor</item>
+    </style>
+
+    <style name="customMenuItem" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:background">#dcdcdc</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:dropDownVerticalOffset">-4.0dip</item>
+    </style>
+
+</resources>
